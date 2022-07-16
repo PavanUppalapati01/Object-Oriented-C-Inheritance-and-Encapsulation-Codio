@@ -10,12 +10,10 @@ class VectorAddSix : public VectorAddThree {
       nums.push_back(num6);
       return nums;
     }
-  
   protected:
     int num4 = 4;
     int num5 = 5;
     int num6 = 6;
-  
   private:
     vector<int> nums;
 };
@@ -26,11 +24,9 @@ class Airplane : public Vehicle {
     Airplane(double s) {
       speed = s;
     }
-  
     void Distance(double time) {
       cout << speed * time << endl;
     }
-    
   private:
     double speed;
 };
@@ -47,12 +43,10 @@ class Conversion : public Temperature {
       }
       return -0.0001;
     }
-  
   private:
     double Celsius(double temp) {
       return (temp - 32) / 1.8;
     }
-  
     double Fahrenheit(double temp) {
       return temp * 1.8 + 32;
     }
@@ -64,19 +58,16 @@ class Median {
     double CalculateMedian(int n1, int n2) {
       return (double) (n1 + n2) / 2;
     }
-  
     double CalculateMedian(int n1, int n2, int n3) {
       vector<int> nums = {n1, n2, n3};
       sort(nums.begin(), nums.end());
       return nums.at(1);
     }
-
     double CalculateMedian(int n1, int n2, int n3, int n4) {
       vector<int> nums = {n1, n2, n3, n4};
       sort(nums.begin(), nums.end());
       return (double) (nums.at(1) + nums.at(2)) / 2;
     }
-
     double CalculateMedian(int n1, int n2, int n3, int n4, int n5) {
       vector<int> nums = {n1, n2, n3, n4, n5};
       sort(nums.begin(), nums.end());
@@ -90,7 +81,6 @@ class Substitute : public Words {
     Substitute(string s2) : Words(s2) {
       input_string = s2;
     }
-  
     string SubstituteChar() {
       string sub;
       if (input_string.length() < 5) {
@@ -108,8 +98,7 @@ class Substitute : public Words {
       }
       return sub;
     }
-  
   private:
     string input_string;
 };
-..
+...
